@@ -1,68 +1,87 @@
-# ContextForge
+# KnowSphere
 
-A lightweight personal knowledge-compilation application designed to help developers, students, and open-source contributors capture, organize, and contextually query technical information.
-
-This project is being developed as a learning-focused software engineering project to understand programming fundamentals, semantic vector databases, and real-world application architecture.
-
-## Project Overview
-
-ContextForge allows users to ingest unstructured technical data, automatically extract core components like code snippets, maintain semantic links between concepts, and query their aggregated learning history using natural language.
-
-The goal is to eliminate fragmented documentation and information overload through an intelligent local context engine.
-
-Examples of knowledge ingested:
-* API Documentation Snippets
-* Error Resolution Logs
-* Terminal Command Workflows
-* Technical Article Summaries
-* Git Workflow Frameworks
-
-## Objectives
-
-* Help developers build a reliable, local engineering memory.
-* Provide fast, context-aware retrieval of code and commands.
-* Maintain logical relationships between independent frameworks.
-* Learn software engineering and AI orchestration through a practical project.
+An AI-powered personal knowledge management system that helps users organize, summarize, connect, and retrieve information from PDFs, articles, YouTube videos, and personal notes.
 
 ## Features
 
-### Fragment Management
-* Ingest text fragments
-* View stored fragments
-* Update fragment text and custom tags
-* Delete legacy fragments
+### Content Import
 
-### Semantic Synthesis
-* Automated code block isolation
-* Key concept extraction
-* Automated categorization based on content
-* Metadata stamping (creation date, source type)
+- Upload PDF documents
+- Import article URLs
+- Add personal notes
+- Import YouTube video transcripts
 
-### Context Querying
-* Natural language prompt search
-* Historical search ("What did I learn about FastAPI last week?")
-* Associated code block retrieval
-* Multi-document context merging
+### AI Summarization
 
-## Technology Stack
+- Generate concise summaries
+- Extract key concepts
+- Identify important topics
 
-### Current Version
-* Python
-* JSON File Storage (Metadata mapping)
-* Lightweight Embedding Engine (Local numpy vectors)
+### Knowledge Graph
 
-### Planned Enhancements
-* HTML / Tailwind CSS
-* JavaScript
-* FastAPI Backend
-* ChromaDB / FAISS Vector Database
-* Google Gemini API / Hugging Face Inference API
+- Connect related concepts
+- Visualize topic relationships
+- Discover hidden connections
 
-## Programming Concepts Covered
+### Intelligent Search
 
-This project is designed to teach crucial software development and AI engineering concepts.
+- Ask questions in natural language
+- Search across all uploaded content
+- Retrieve context-aware answers
 
-### Variables
-Store fragment text and structural data.
-```python
-fragment_text = "git commit -m 'Initial commit'"
+### Learning Insights
+
+- View learning history
+- Track frequently explored topics
+- Monitor knowledge growth
+
+## Prerequisites
+
+Python 3.10 or later
+
+## Setup
+
+Clone the repository.
+
+Create and activate a virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running the Application
+
+Run the application from the root directory:
+
+```bash
+python main.py
+```
+
+## Running Tests
+
+To run unit tests:
+
+```bash
+PYTHONPATH=. pytest tests/unit/
+```
+
+## Project Structure
+
+- main.py: Entry point for the application.
+- src/ingestion.py: Handles content import and processing.
+- src/summarizer.py: Generates AI summaries.
+- src/graph_builder.py: Builds concept relationships.
+- src/search.py: Handles semantic search.
+- src/storage.py: Manages data persistence.
+- specs/: Project specifications and planning documents.
+
+## License
+
+Educational purpose - feel free to use, learn, and contribute.
